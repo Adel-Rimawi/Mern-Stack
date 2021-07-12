@@ -18,10 +18,11 @@ showstats(){
 drinkSake(){
     this.health+=10; 
 }
-}
+}           
 
 adel = new ninja("Adel", 100);
 adel.showstats();
 adel.sayname();
 adel.drinkSake();
 adel.showstats();
+
