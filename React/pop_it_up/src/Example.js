@@ -5,7 +5,7 @@ export class Example extends Component {
         super(props);
         this.state = {Age: this.props.age};
     }
-    const 
+    
     
     
     render() {
