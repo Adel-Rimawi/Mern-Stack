@@ -6,6 +6,7 @@ const UserForm = (props) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [passwordconf, setPasswordconf] = useState(""); 
+    const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false);
     
     const createUser = (e) => {
         e.preventDefault();
@@ -26,7 +27,7 @@ const UserForm = (props) => {
             </div>
             <div>
                 <label>Password: </label>
-                <input type="text" onChange={ (e) => setPassword(e.target.value) } />
+                <input type="text" onChange={ (e) => setPassword(e.target.value )  }/>
             </div>
             <div>
                 <label>Confirm Password: </label>
