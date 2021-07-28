@@ -1,0 +1,36 @@
+> use my_first_db
+> db.createCollection("students")
+> db.students.insert({name: "Adel", home_state:"Ramallah", lucky_number: 8, birthday:{month: 5 , day: 8,  year: 1999 }})
+> db.students.insert({name: "Khalil_Khalil", home_state:"Kalandia_Al9omod", lucky_number: 30, birthday: {month: 5, day: 9, year: 1999} })
+> db.students.insert({name: "Wead", home_state:"Ramallah", lucky_number: 42, birthday: {month: 5, day: 9, year: 1985} })
+> db.students.insert({name: "Mohammed_Kitahen", home_state:"Ramallah", lucky_number: 6, birthday: {month: 5, day: 9, year: 1996} })
+> db.students.insert({name: "Baraa", home_state:"Ramallah", lucky_number: 6, birthday: {month: 5, day: 9, year: 1998} })
+> db.students.find().pretty()
+> db.students.find({home_state: "Ramallah"}).pretty()
+> db.students.find({lucky_number: {$gt:3}}).pretty()
+> db.students.find({lucky_number: {$lte:10}}).pretty()
+> db.students.find({lucky_number: {$lt:9}, lucky_number: {$gt:1}}).pretty()
+> db.students.updateMany({},  {$set: {interests: ["coding", "brunch", "MongoDB" ]}})
+> db.students.update({_id: "61010d2ca66ac4c2dc5d455d"},  {$push: {interests: "rap"}})
+> db.students.update({_id: "61010bdea66ac4c2dc5d455a"},  {$push: {interests: "taxes"}})
+> db.students.update({_id: "61010bdea66ac4c2dc5d455a"},  {$pop: {interests: -1}})
+> db.students.deleteMany({home_state: "Ramallah"})
+> db.students.deleteOne({name: "Wead"})
+> db.students.deleteOne({lucky_number: {$gt: 5}})
+> db.students.updateMany({},  {$set: {number_of_belts:0}})
+> db.students.updateMany({home_state:"Ramallah"},  { $inc: { number_of_belts: 1 } })
+> db.students.updateMany({},  {$rename: { number_of_belts: "belts_earned" } }) 
+> db.students.updateMany({},  { $unset: { lucky_number:"" } })
+> db.students.updateMany( {} , { $currentDate: { updated_on: {$type: "date"} } })
+
+
+
+
+
+
+
+
+
+
+
+

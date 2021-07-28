@@ -2,7 +2,7 @@ import React from 'react'
 
 const result= (props)=> {
     const firstName = props.firstName;
-    const lastName = props.firstName
+    const lastName = props.lastName
     const email = props.email;
     const password = props.password;
     const passconf = props.passconf;
