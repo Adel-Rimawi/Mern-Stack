@@ -1,7 +1,7 @@
 import React, { useState } from  'react';
 import Todo from './Todo';
 
-
+// it has some problems i'll fix it later 
 const Form = () => {
     const [events, setEvents] = useState([]);
     const [event, setEvent] = useState("");
