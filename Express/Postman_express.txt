@@ -1,0 +1,5 @@
+https://pokeapi.co/api/v2/pokemon/pikachu
+https://pokeapi.co/api/v2/pokemon/20
+https://pokeapi.co/api/v2/pokemon/3
+https://pokeapi.co/api/v2/pokemon/17
+https://pokeapi.co/api/v2/pokemon/what is this assignment ._.

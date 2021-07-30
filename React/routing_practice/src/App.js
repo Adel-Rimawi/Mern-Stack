@@ -10,7 +10,7 @@ function App() {
       <Router>
             <Home path="/home"/>
             <Number path="/:num"/>
-            <Vars path="/:var/:background/:color"/>
+            <Vars path="/:var/:color/:background"/>
         </Router>
     </div>
   );
