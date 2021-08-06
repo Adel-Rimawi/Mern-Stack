@@ -4,7 +4,8 @@ const ProductSchema = new mongoose.Schema({
 	title: String,
 	age: Number,
 	descreption: String
-});
+},
+{timestamps: true});
 
 const Product = mongoose.model("Product", ProductSchema);
 
