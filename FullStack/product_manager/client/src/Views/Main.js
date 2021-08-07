@@ -10,32 +10,37 @@ import ProductForm from '../components/ProductForm'
 const Main = () => {
     const [products, setProducts] = useState([]);
     const [loaded, setLoaded] = useState(false);
+    
     useEffect(()=>{
         axios.get('http://localhost:8000/api/products')
             .then(res=>{
-                setProducts(res.data.products);
+                setProducts(res.data);
                 setLoaded(true);
             });
-    },[])
+    },[]);
+    
     const removeFromDom = productId => {
-        setProducts(products.filter(product => product._id != productId));
+        setProducts(products.filter(product => product._id !== productId));
     }
+
     const createProduct = product => {
         axios.post('http://localhost:8000/api/products/new', product)
             .then(res=>{
                 setProducts([...products, res.data]);
-            })
-    }
+            });
+    };
+
+    console.log("ayeshe");
+
     return (
         <div>
             <Router>
-            <ProductForm onSubmitProp={createProduct} path = "/" initialTitle="" initialAge="" initialDescription="" />
-            
-            <Product  path = "/product/:id"/>
-            <Editproduct path = "/:id/edit"/>
+                <ProductForm onSubmitProp={createProduct} path = "/" initialTitle="" initialAge="" initialDescription="" />
+                <Product  path = "/product/:id"/>
+                <Editproduct path = "/:id/edit"/>
             </Router>
             {loaded && (
-            <Products products={products}   removeFromDom={removeFromDom} />)}
+            <Products products={products} removeFromDom={removeFromDom} />)}
         </div>
     );
 }

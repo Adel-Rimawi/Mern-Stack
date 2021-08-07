@@ -25,21 +25,21 @@ return (
         <div>
             <h3>New Product</h3>
             {console.log("newProduct")}
-            <Form onSubmit={onSubmitHandler}>
-    <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Title </Form.Label>
-        <Form.Control type="text" placeholder="Enter Title" onChange={(e)=>setTitle(e.target.value)} value={title}/>
-    </Form.Group>
-    <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Age </Form.Label>
-        <Form.Control type="text" placeholder="Enter Age" onChange={(e)=>setAge(e.target.value)} value={age}/>
-    </Form.Group>
-    <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Description </Form.Label>
-        <Form.Control type="text" placeholder="Enter Description" onChange={(e)=>setDescription(e.target.value)} value={descreption}/>
-    </Form.Group>
-    <Button variant="primary" type="submit">Submit</Button>
-  </Form>
+        <Form onSubmit={onSubmitHandler}>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Title </Form.Label>
+                <Form.Control type="text" placeholder="Enter Title" onChange={(e)=>setTitle(e.target.value)} value={title}/>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Age </Form.Label>
+                <Form.Control type="text" placeholder="Enter Age" onChange={(e)=>setAge(e.target.value)} value={age}/>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Description </Form.Label>
+                <Form.Control type="text" placeholder="Enter Description" onChange={(e)=>setDescription(e.target.value)} value={descreption}/>
+            </Form.Group>
+            <Button variant="primary" type="submit">Submit</Button>
+    </Form>
         </div>
     )
 }

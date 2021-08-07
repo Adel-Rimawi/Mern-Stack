@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios';
-export default props => {
+import React, { useState } from 'react';
+
+const ProductForm = props => {
+    
     const { initialTitle, initialAge, initialDescription , onSubmitProp } = props;
     const [title, setTitle] = useState(initialTitle);
     const [age, setAge] = useState(initialAge);
-    const [description, setDescription] = useState(initialDescription)
+    const [descreption, setDescription] = useState(initialDescription)
 
     const onSubmitHandler = e => {
         e.preventDefault();
-        onSubmitProp({title, age, description});
+        onSubmitProp({title, age, descreption});
     }
         
     return (
@@ -32,11 +33,13 @@ export default props => {
                 <label>Description </label><br />
                 <input 
                     type="text" 
-                    name="description" 
-                    value={description} 
+                    name="descreption" 
+                    value={descreption} 
                     onChange={(e) => { setDescription(e.target.value) }} />
             </p>
             <input type="submit" />
         </form>
     )
 }
+
+export default ProductForm
